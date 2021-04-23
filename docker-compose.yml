@@ -17,7 +17,7 @@ services:
     container_name: nestjs_pgadmin
     image: dpage/pgadmin4
     environment: 
-      PGADMIN_DEFAULT_EMAIL: "manoharramarao@gmail.com"
+      PGADMIN_DEFAULT_EMAIL: "my@email.com"
       PGADMIN_DEFAULT_PASSWORD: "test1234"
     ports: 
       - "5050:80"
