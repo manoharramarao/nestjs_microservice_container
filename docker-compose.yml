@@ -9,7 +9,7 @@ services:
     ports: 
       - "5432:5432"
     volumes: 
-      - ./data/pgadmin
+      - db_data:/var/lib/postgresql/data
     networks: 
       - nestjs_network
 
@@ -42,6 +42,9 @@ services:
       - pgadmin
     networks: 
       - nestjs_network
+
+volumes:
+  db_data:
 
 networks: 
   nestjs_network:
