@@ -2,13 +2,13 @@ import { Transport, MicroserviceOptions } from '@nestjs/microservices';
 import { join } from 'path';
 import * as config from 'config';
 
-const url = config.get('url');
+const url = config.get('grpcUrl');
 
 export const microserviceOptions: MicroserviceOptions = {
     transport: Transport.GRPC,
     options: {
-      package: 'ums',
-      protoPath: join(__dirname, '../../src/proto/ums.proto'),
-      url: url.ums,
+      package: 'nestjs',
+      protoPath: join(__dirname, '../../src/proto/nestjs.proto'),
+      url: url.nestjs,
     },
 };

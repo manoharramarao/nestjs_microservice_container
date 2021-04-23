@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package nestjs;
+
+service nestjsService {
+    rpc callGrpc(Empty) returns (ResponseDto);
+}
+
+message ResponseDto {
+    string res = 1;
+}
+
+message Empty {}
